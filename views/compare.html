@@ -1,0 +1,17 @@
+<div class="content">
+    <button ng-click="order = 'name'">Order by Price</button>
+    <button ng-click="order = 'tevalue'">Order by TE Value</button>
+    <input type="text" ng-model="search" />
+    <ul>
+        <li ng-repeat="prescription in prescriptions">
+            <h3>{{prescription.name}} - {{prescription.price}} - {{prescription.tevalue}}</h3>
+            <div class="remove" ng-click="removePrescription(prescription)">x</div>
+        </li>
+    </ul>
+    <form ng-submit="addprescription()">
+        <input type="text" placeholder="name" ng-model="prescription.name" />
+        <input type="text" placeholder="price" ng-model="prescription.price" />
+        <input type="text" placeholder="tevalue" ng-model="prescription.tevalue" />
+        <input type="submit" value="add new prescription" />
+    </form>
+</div>
