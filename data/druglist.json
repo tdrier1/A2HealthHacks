@@ -1,16 +1,56 @@
 [{
     "name": "Prozac",
-    "gen1": "Gen1",
-    "gen2": "Gen2",
-    "gen3": "Gen3"
+    "gen1": "Gen1 Name",
+    "gen1price": "$14.99",
+    "gen1link": "http://www.walmart.com",
+    "gen2": "Gen2 Name",
+    "gen2price": "$24.99",
+    "gen2link": "http://www.cvs.com",
+    "gen3": "Gen3 Name",
+    "gen3price": "$34.99",
+    "gen3link": "http://www.costco.com"
 }, {
     "name": "Ambien",
-    "gen1": "Gen1",
-    "gen2": "Gen2",
-    "gen3": "Gen3"
+    "gen1": "Gen1 Name",
+    "gen1price": "$14.99",
+    "gen1link": "http://www.walmart.com",
+    "gen2": "Gen2 Name",
+    "gen2price": "$24.99",
+    "gen2link": "http://www.cvs.com",
+    "gen3": "Gen3 Name",
+    "gen3price": "$34.99",
+    "gen3link": "http://www.costco.com"
 }, {
     "name": "Allegra",
-    "gen1": "Gen1",
-    "gen2": "Gen2",
-    "gen3": "Gen3"
+    "gen1": "Gen1 Name",
+    "gen1price": "$14.99",
+    "gen1link": "http://www.walmart.com",
+    "gen2": "Gen2 Name",
+    "gen2price": "$24.99",
+    "gen2link": "http://www.cvs.com",
+    "gen3": "Gen3 Name",
+    "gen3price": "$34.99",
+    "gen3link": "http://www.costco.com"
+}, {
+    "name": "Claratin",
+    "gen1": "Gen1 Name",
+    "gen1price": "$14.99",
+    "gen1link": "http://www.walmart.com",
+    "gen2": "Gen2 Name",
+    "gen2price": "$24.99",
+    "gen2link": "http://www.cvs.com",
+    "gen3": "Gen3 Name",
+    "gen3price": "$34.99",
+    "gen3link": "http://www.costco.com"
+}, {
+    "name": "Morphine",
+    "gen1": "Gen1 Name",
+    "gen1price": "$14.99",
+    "gen1link": "http://www.walmart.com",
+    "gen2": "Gen2 Name",
+    "gen2price": "$24.99",
+    "gen2link": "http://www.cvs.com",
+    "gen3": "Gen3 Name",
+    "gen3price": "$34.99",
+    "gen3link": "http://www.costco.com"
 }]

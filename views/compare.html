@@ -1,12 +1,47 @@
 <div class="content">
     <form name="ScriptForm">
-        <input type="text" ng-model="search">
+        <center>
+            <h3>Drug Search</h3>
+        </center>
+        <br>
+        <input type="text" placeholder="Enter your subscription or leave blank to browse" style="width: 50%" ng-model="search">
         <button ng-click="loadData();">Submit</button>
     </form>
-    <ul>
-        <h3>Drug Search</h3>
+    <ul id="scriptList">
         <li ng-repeat=" prescription in prescriptions | filter:{name:search}:true ">
-            {{prescription.name}} <br><br> {{prescription.gen1}}<br>{{prescription.gen2}}<br>{{prescription.gen3}}
-        </li>
+            <div class="resultDiv">
+                {{prescription.name}}
+
+                <div class="scriptinfo">
+                    <ul>
+
+                        <li>
+                            <div class="rowclass">
+                                <div class="namediv">{{prescription.gen1}}</div>
+                                <div class="pricediv">{{prescription.gen1price}}</div>
+                                <div class="linkdiv"><a href="{{prescription.gen1link}}">Buy</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rowclass">
+                                <div class="namediv">{{prescription.gen2}}</div>
+                                <div class="pricediv">{{prescription.gen2price}}</div>
+                                <div class="linkdiv"><a href="{{prescription.gen2link}}">Buy</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rowclass">
+                                <div class="namediv">{{prescription.gen2}}</div>
+                                <div class="pricediv">{{prescription.gen2price}}</div>
+                                <div class="linkdiv"><a href="{{prescription.gen2link}}">Buy</a></div>
+                            </div>
+                            <li>
+
+                    </ul>
+
+                </div>
+            </div>
+            </li>
     </ul>
+
 </div>

@@ -9,6 +9,7 @@
 body {
     font-family: Helvetica;
     margin: 0;
+    height: 100%;
 }
 
 h1,
@@ -17,41 +18,52 @@ h3 {
     margin: 0;
 }
 
-.belt {
-    padding: 5px 10px;
-    border-radius: 10px;
-    margin-left: 5px;
-    color: #fff;
-    font-size: 15px;
-    text-transform: uppercase;
-}
-
 #menu-bar {
-    background: crimson;
+    background: lightgreen;
     color: #fff;
-    padding: 10px;
+    padding: 0px;
+    width: 100%;
+    display: inline-block;
+    position: relative;
 }
 
-#menu-bar h1 {
-    font-size: 24px;
-    font-weight: normal;
-    display: inline-block;
+.headermenu {
+    width: 70%;
+}
+
+.headertitle {
+    width: 25%;
+    text-align: center;
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    font-size: 2em;
+    font-style: italic;
 }
 
 #menu-bar ul {
-    float: right;
     list-style-type: none;
+    margin: 0;
     padding: 0;
-    margin: 6px 0;
+    overflow: hidden;
+    background-color: lightgreen;
 }
 
 #menu-bar li {
-    float: right;
-    margin-left: 20px;
+    float: left;
+    height: 50px;
 }
 
-#menu-bar a {
-    color: #fff
+#menu-bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 18px 16px;
+    text-decoration: none;
+}
+
+#menu-bar li a:hover {
+    background-color: slategray;
 }
 
 main {
@@ -111,6 +123,15 @@ main {
     margin: 10px 0;
 }
 
+.content textarea {
+    width: 90%;
+    padding: 10px 5%;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    margin: 10px 0;
+    height: 75px;
+}
+
 .content input[type="submit"]:last-child {
     width: 150px;
     display: block;
@@ -129,7 +150,7 @@ main {
     margin-left: 10px;
 }
 
-.scriptname {
+.resultDiv {
     max-height: 1em;
     background: slategray;
     color: white;
@@ -141,8 +162,86 @@ main {
     overflow: hidden;
     padding: 10px;
     border-radius: 10px;
+    font-weight: bold;
 }
 
-.scriptname:hover {
+.resultDiv:hover {
     max-height: 999px;
+    animation: fadein 4s;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+
+input[disabled="disabled"] {
+    opacity: 0.4;
+    cursor: not-allowed !important;
+}
+
+.bottomdiv {
+    width: 100%;
+    height: 50px;
+    background: lightgreen;
+    position: absolute;
+    bottom: 0;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+main.ng-enter {
+    transition: 0.5s linear all;
+    opacity: 0;
+}
+
+main.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+#scriptList li.ng-enter {
+    transition: 0.2s linear all;
+    opacity: 0;
+}
+
+#scriptList li.ng-enter-active {
+    opacity: 1;
+}
+
+.rowclass {
+    width: 100%;
+    display: inline-block;
+    color: white;
+}
+
+.namediv {
+    width: 80%;
+    display: inline-block;
+}
+
+.pricediv {
+    width: 5%;
+    display: inline-block;
+}
+
+.linkdiv {
+    display: inline;
+    position: relative;
+    text-align: center;
+    background: white;
+    border: 5px black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.linkdiv :hover {
+    background: lightgreen;
+    color: white;
+    padding: 0 0;
+}
+
+.linkdiv :link {
+    text-decoration: none;
 }

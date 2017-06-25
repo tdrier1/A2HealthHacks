@@ -1,14 +1,26 @@
-var myPrescriptionApp = angular.module('myPrescriptionApp', ['ngRoute']);
+var myPrescriptionApp = angular.module('myPrescriptionApp', ['ngRoute', 'ngAnimate']);
 
 myPrescriptionApp.config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/home', {
-            templateUrl: 'views/home.html'
+    $routeProvider.when('/', {
+            templateUrl: '/views/compare.html',
+            controller: 'prescriptionController'
         })
         .when('/compare', {
-            templateUrl: 'views/compare.html',
+            templateUrl: '/views/compare.html',
             controller: 'prescriptionController'
+        })
+        .when('/contact', {
+            templateUrl: '/views/contact.html',
+            controller: 'contactController'
+        })
+        .when('/submitForm', {
+            templateUrl: '/views/submitForm.html',
+            controller: 'contactController'
+        })
+        .when('/about', {
+            templateUrl: '/views/about.html',
         }).otherwise({
-            redirectTo: '/home'
+            redirectTo: '/views/compare.html'
         });
 }]);
 
@@ -23,3 +35,10 @@ myPrescriptionApp.controller('prescriptionController', ['$scope', '$http', funct
         });
     }
 }]);
+
+myPrescriptionApp.controller('contactController', ['$scope', '$location', function($scope, $location) {
+
+    $scope.sendMessage = function() {
+        $location.path('/submitForm');
+    };
+}])

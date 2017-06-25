@@ -1,0 +1,19 @@
+<center>
+    <br>
+    <h1>Contact Us!</h1>
+</center>
+
+<div class="content">
+    <form name="contactForm" ng-submit="sendMessage()" novalidate>
+        <input type="text" placeholder="Please enter a name" name="name" ng-model="contact.name" ng-required="true" />
+        <div ng-show=contactForm.name$touched && contactForm.name.$invalid ">
+            <small style="color:red; display:block; text-align: center; "> Enter a vaild name</small>
+        </div>
+        <input type="email " placeholder="Please enter an email " name="email " ng-model="contact.email " ng-required="true " />
+          <div ng-show=contactForm.name$touched && contactForm.name.$invalid">
+            <small style="color:red; display:block; text-align: center;"> Enter a vaild email</small>
+        </div>
+        <textarea placeholder="Please leave a detailed message" name="message" ng-model="contact.message" ng-required="true"></textarea>
+        <input type="submit" value="Send" ng-disabled="contactForm.$invalid" />
+    </form>
+</div>
