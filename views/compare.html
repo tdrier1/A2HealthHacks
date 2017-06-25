@@ -1,7 +1,7 @@
 <div class="content">
     <form name="ScriptForm">
         <center>
-            <h3>Drug Search</h3>
+            <h1>Drug Search</h1>
         </center>
         <br>
         <input type="text" placeholder="Enter your subscription or leave blank to browse" style="width: 50%" ng-model="search">
@@ -17,23 +17,26 @@
 
                         <li>
                             <div class="rowclass">
-                                <div class="namediv">{{prescription.gen1}}</div>
+                                <div class="namediv1">{{prescription.gen1}}</div>
+                                <div class="purpose1">{{prescription.gen1purpose}}</div>
                                 <div class="pricediv">{{prescription.gen1price}}</div>
                                 <div class="linkdiv"><a href="{{prescription.gen1link}}">Buy</a></div>
                             </div>
                         </li>
                         <li>
                             <div class="rowclass">
-                                <div class="namediv">{{prescription.gen2}}</div>
+                                <div class="namediv2">{{prescription.gen2}}</div>
+                                <div class="purpose2">{{prescription.gen2purpose}}</div>
                                 <div class="pricediv">{{prescription.gen2price}}</div>
                                 <div class="linkdiv"><a href="{{prescription.gen2link}}">Buy</a></div>
                             </div>
                         </li>
                         <li>
                             <div class="rowclass">
-                                <div class="namediv">{{prescription.gen2}}</div>
-                                <div class="pricediv">{{prescription.gen2price}}</div>
-                                <div class="linkdiv"><a href="{{prescription.gen2link}}">Buy</a></div>
+                                <div class="namediv3">{{prescription.gen3}}</div>
+                                <div class="purpose3">{{prescription.gen3purpose}}</div>
+                                <div class="pricediv">{{prescription.gen3price}}</div>
+                                <div class="linkdiv"><a href="{{prescription.gen3link}}">Buy</a></div>
                             </div>
                             <li>
 
