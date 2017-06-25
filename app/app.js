@@ -14,25 +14,12 @@ myPrescriptionApp.config(['$routeProvider', function($routeProvider) {
 
 myPrescriptionApp.controller('prescriptionController', ['$scope', '$http', function($scope, $http) {
 
-
-    $scope.removePrescription = function(prescription) {
-        var removePrescription = $scope.prescription.indexOf(prescription);
-        $scope.prescriptions.splice(removePrescription, 1);
-    };
-
-    $scope.addPrescription = function() {
-        $scope.prescriptions.push({
-            name: $scope.newprescription.name,
-            price: $scope.newprescription.price,
-            tevalue: $scope.newprescription.tevalue
+    $scope.init = function() {
+        $scope.prescriptions = "";
+    }
+    $scope.loadData = function() {
+        $http.get('data/druglist.json').then(function(response) {
+            $scope.prescriptions = response.data;
         });
-
-        $scope.newprescription.name = "";
-        $scope.newprescription.price = "";
-        $scope.newprescription.tevalue = "";
-    };
-
-    $http.get('data/drugsearch.json').then(function(response) {
-        $scope.prescriptions = response.data;
-    });
+    }
 }]);

@@ -1,17 +1,12 @@
 <div class="content">
-    <button ng-click="order = 'name'">Order by Price</button>
-    <button ng-click="order = 'tevalue'">Order by TE Value</button>
-    <input type="text" ng-model="search" />
+    <form name="ScriptForm">
+        <input type="text" ng-model="search">
+        <button ng-click="loadData();">Submit</button>
+    </form>
     <ul>
-        <li ng-repeat="prescription in prescriptions">
-            <h3>{{prescription.name}} - {{prescription.price}} - {{prescription.tevalue}}</h3>
-            <div class="remove" ng-click="removePrescription(prescription)">x</div>
+        <h3>Drug Search</h3>
+        <li ng-repeat=" prescription in prescriptions | filter:{name:search}:true ">
+            {{prescription.name}} <br><br> {{prescription.gen1}}<br>{{prescription.gen2}}<br>{{prescription.gen3}}
         </li>
     </ul>
-    <form ng-submit="addprescription()">
-        <input type="text" placeholder="name" ng-model="prescription.name" />
-        <input type="text" placeholder="price" ng-model="prescription.price" />
-        <input type="text" placeholder="tevalue" ng-model="prescription.tevalue" />
-        <input type="submit" value="add new prescription" />
-    </form>
 </div>

@@ -128,3 +128,21 @@ main {
     cursor: pointer;
     margin-left: 10px;
 }
+
+.scriptname {
+    max-height: 1em;
+    background: slategray;
+    color: white;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    -webkit-transition: 1s;
+    transition: 1s;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.scriptname:hover {
+    max-height: 999px;
+}
